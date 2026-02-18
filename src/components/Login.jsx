@@ -29,14 +29,26 @@ const Login = () => {
     <Container maxWidth="sm">
       <Box sx={{
         minHeight: "80vh",
+        flexDirection: "column",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "flex-start",
+       
+        pt: 10 ,
       }}>
         <Paper elevation={6} sx={{ p: 4, width: "100%" }}>
-          <Typography variant="h4" align="center" gutterBottom>
-            Login
-          </Typography>
+         <Typography 
+            variant="h4" 
+              align="center" 
+              gutterBottom
+             sx={{ 
+                fontWeight: 800,          
+                letterSpacing: "-0.5px",        
+                 textTransform: "uppercase" 
+            }}
+            >
+          Login
+         </Typography>
 
           <Box sx={{
             display: "flex",

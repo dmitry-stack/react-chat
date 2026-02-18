@@ -7,6 +7,7 @@ import AppRouter from "./components/AppRouter";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Context } from "./main";
 import Loader from "./components/Loader";
+import { Box } from "@mui/material";
 
 function App() {
   
@@ -18,8 +19,11 @@ const { auth } = React.useContext(Context);
   return (
      <BrowserRouter>
       
-        <Navbar />
-        <AppRouter />
+         <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+          <Navbar />
+      <AppRouter />
+    </Box>
+  
     </BrowserRouter>
      
     

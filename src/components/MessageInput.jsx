@@ -13,7 +13,7 @@ const MessageInput = ({ onSendMessage }) => {
   };
 
   return (
-    <Box sx={{ p: 2, bgcolor: "white", borderTop: '1px solid #eee' }}>
+    <Box sx={{ p: 2,mt: "auto", bgcolor: "white", borderTop: '1px solid #eee' }}>
       <TextField
         fullWidth
         variant="standard"

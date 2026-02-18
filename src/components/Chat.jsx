@@ -40,11 +40,38 @@ const Chat = () => {
 
   if (loadingAuth || loadingMessages) return <Box sx={{ display: 'flex', justifyContent: 'center', mt: 10 }}><CircularProgress /></Box>;
 
-  return (
-    <Container maxWidth="md" sx={{ py: 4, height: "100vh" }}>
-      <Paper elevation={6} sx={{ height: "85vh", display: "flex", flexDirection: "column", borderRadius: "20px", overflow: "hidden" }}>
+ return (
+   
+    <Container 
+      
+      sx={{ 
+        flex: 1,
+        height: "100vh", 
+        p: 0, 
+        display: "flex", 
+        flexDirection: "column", 
+        width: "100%", 
+          maxWidth: "100%",
+      }} 
+      disableGutters
+    >
+      <Paper 
+      
+        sx={{ 
+          height: "90vh", 
+          display: "flex", 
+          flexDirection: "column", 
+          borderRadius: 0,
+          overflow: "hidden" 
+        }}
+      >
         <ChatHeader user={user} auth={auth} />
-        <MessageList messages={messages} user={user} onDelete={deleteMessage} bottomRef={bottomRef} />
+        <MessageList 
+          messages={messages} 
+          user={user} 
+          onDelete={deleteMessage} 
+          bottomRef={bottomRef} 
+        />
         <MessageInput onSendMessage={sendMessage} />
       </Paper>
     </Container>
